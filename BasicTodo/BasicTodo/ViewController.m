@@ -47,6 +47,7 @@
 
 - (IBAction)clear:(id)sender {
     self.todoTextView.text = @"";
+    [self.todos removeAllObjects];
 }
 
 - (void)update
