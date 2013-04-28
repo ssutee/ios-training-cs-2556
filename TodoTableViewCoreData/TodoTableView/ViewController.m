@@ -66,7 +66,16 @@
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+    [super didReceiveMemoryWarning];    
+}
+
+- (void)warning
+{
+    self.suspendAutomaticTrackingOfChangesInManagedObjectContext = YES;
+    // operations
+    self.suspendAutomaticTrackingOfChangesInManagedObjectContext = NO;
+    [self performFetch];
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
