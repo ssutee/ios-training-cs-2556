@@ -20,6 +20,7 @@
 		9EAFC031172CC9E8005C18DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAFC030172CC9E8005C18DC /* ViewController.m */; };
 		9EAFC039172CCCDE005C18DC /* Todos.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAFC038172CCCDE005C18DC /* Todos.m */; };
 		9EAFC03E172CCD5B005C18DC /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAFC03D172CCD5B005C18DC /* Todo.m */; };
+		9EAFC041172CFBDD005C18DC /* EditTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAFC040172CFBDD005C18DC /* EditTodoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		9EAFC038172CCCDE005C18DC /* Todos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todos.m; sourceTree = "<group>"; };
 		9EAFC03C172CCD5B005C18DC /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		9EAFC03D172CCD5B005C18DC /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		9EAFC03F172CFBDD005C18DC /* EditTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTodoViewController.h; sourceTree = "<group>"; };
+		9EAFC040172CFBDD005C18DC /* EditTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTodoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 			children = (
 				9EAFC02F172CC9E8005C18DC /* ViewController.h */,
 				9EAFC030172CC9E8005C18DC /* ViewController.m */,
+				9EAFC03F172CFBDD005C18DC /* EditTodoViewController.h */,
+				9EAFC040172CFBDD005C18DC /* EditTodoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				9EAFC031172CC9E8005C18DC /* ViewController.m in Sources */,
 				9EAFC039172CCCDE005C18DC /* Todos.m in Sources */,
 				9EAFC03E172CCD5B005C18DC /* Todo.m in Sources */,
+				9EAFC041172CFBDD005C18DC /* EditTodoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

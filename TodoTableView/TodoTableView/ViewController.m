@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "Todos.h"
 #import "Todo.h"
+#import "EditTodoViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<EditTodoViewControllerDelegate>
 
 @property (nonatomic, strong) Todos *todos;
 
@@ -94,6 +95,27 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"Edit Todo" sender:indexPath];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Edit Todo"]) {
+        NSIndexPath *indexPath = sender;
+        EditTodoViewController *controller = segue.destinationViewController;
+        controller.todoName = [self.todos todoAtPosition:indexPath.row].name;
+        controller.delegate = self;
+    }
+}
+
+- (void)editTodoViewControler:(EditTodoViewController *)controller didSaveWithName:(NSString *)name
+{
+    NSLog(@"%@", name);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
