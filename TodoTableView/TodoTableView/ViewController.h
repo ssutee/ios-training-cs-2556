@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *inputText;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

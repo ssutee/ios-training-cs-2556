@@ -14,5 +14,7 @@
 - (void)add:(Todo *)todo;
 - (void)clear;
 - (void)removeAtPosition:(NSUInteger)position;
+- (NSInteger)count;
+- (Todo *)todoAtPosition:(NSUInteger)position;
 
 @end

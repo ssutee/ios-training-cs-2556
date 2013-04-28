@@ -29,17 +29,28 @@
 - (void)add:(Todo *)todo;
 {
     [self.todos addObject:todo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TodoAddedNotification" object:todo];
 }
 
 - (void)clear
 {
     [self.todos removeAllObjects];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TodoClearedNotification" object:self];
 }
 
 - (void)removeAtPosition:(NSUInteger)position
 {
     [self.todos removeObjectAtIndex:position];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TodoRemovedNotification" object:[NSNumber numberWithUnsignedInteger:position]];
 }
 
+- (NSInteger)count
+{
+    return self.todos.count;
+}
 
+- (Todo *)todoAtPosition:(NSUInteger)position
+{
+    return [self.todos objectAtIndex:position];
+}
 @end
